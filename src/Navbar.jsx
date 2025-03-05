@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoLogoChrome } from "react-icons/io";
 
 function Navbar() {
@@ -39,9 +39,9 @@ function Navbar() {
         </ul>
       </nav>
       <div className="flex items-center space-x-4">
-        <button className="bg-indigo-500 px-5 py-2 rounded-full text-white hover:bg-indigo-700 cursor-pointer duration-200 ">
+        <Link to={'/login'} className="bg-indigo-500 px-5 py-2 rounded-full text-white hover:bg-indigo-700 cursor-pointer duration-200 ">
           Log in
-        </button>
+        </Link>
         <ion-icon name={`${openNav ? 'menu' : 'close'}`} className='text-4xl cursor-pointer md:hidden' onClick={toggleHandler}></ion-icon>
       </div>
     </header>
